@@ -5,56 +5,56 @@ export const Reactcomponents = [
     {
         id: 1,
         name: "Profile Card",
-        link: "/react/1/",
+        link: "/components/react/1/",
         img: i1.src,
         description: "A profile card component displaying user information and stats."
     },
     {
         id: 2,
         name: "Dashboard Widget",
-        link: "/react/2/",
+        link: "/components/react/2/",
         img: i1.src,
         description: "A widget for displaying dashboard metrics and summaries."
     },
     {
         id: 3,
         name: "Notification Banner",
-        link: "/react/3/",
+        link: "/components/react/3/",
         img: i1.src,
         description: "A banner component for notifications and alerts."
     },
     {
         id: 4,
         name: "Product Card",
-        link: "/react/4/",
+        link: "/components/react/4/",
         img: i1.src,
         description: "A card for showcasing product details and features."
     },
     {
         id: 5,
         name: "Event Listing",
-        link: "/react/5/",
+        link: "/components/react/5/",
         img: i1.src,
         description: "A component for listing events with dates and details."
     },
     {
         id: 6,
         name: "Feedback Form",
-        link: "/react/6/",
+        link: "/components/react/6/",
         img: i1.src,
         description: "A form for collecting and displaying user feedback."
     },
     {
         id: 7,
         name: "Statistics Panel",
-        link: "/react/7/",
+        link: "/components/react/7/",
         img: i1.src,
         description: "A panel for presenting statistical data and charts."
     },
     {
         id: 8,
         name: "Search Bar",
-        link: "/react/8/",
+        link: "/components/react/8/",
         img: i1.src,
         description: "A search bar component for querying and filtering content."
     }

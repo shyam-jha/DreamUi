@@ -1,4 +1,6 @@
+import Footer from "@/components/root/homepage/Footer";
 import Navbar from "@/components/root/homepage/Navbar";
+import Title from "@/components/root/homepage/Title";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -13,8 +15,12 @@ export default function RootLayout({
 }>) {
     return (
         <>
-            <Navbar />
-            <div className="w-full">{children}</div>
+            <div className="bg-black text-white">
+                <Title />
+                <Navbar />
+                <div className="w-full">{children}</div>
+                <Footer />
+            </div>
         </>
     );
 }

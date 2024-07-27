@@ -1,90 +1,78 @@
 "use client";
+
 import React from "react";
 import { PinContainer } from "../ui/3d-pin";
 import { Nextcomponents } from "@/src/render/constants/nextComp";
 import { Reactcomponents } from "@/src/render/constants/reactComp";
 import { Staticcomponents } from "@/src/render/constants/staticComp";
+import { usePathname } from 'next/navigation';
 
 export function AnimatedPinDemo() {
+    const pathname = usePathname();
+
+    const showNext = pathname.includes("next");
+    const showReact = pathname.includes("react");
+    const showStatic = pathname.includes("static");
+    const showAll = !showNext && !showReact && !showStatic;
+
     return (
-        <div className="max-h-screen overflow-y-auto overflow-x-hidden">
-            <h1 className="mx-10 text-extrabold text-zinc-400 text-2xl max-sm:mx-2">Next Js Components</h1>
-            <div className="h-full w-full grid grid-cols-1 sm:grid-cols-2 gap-4 p-2">
-                {Nextcomponents.map((component) => (
-                    <div key={component.id} className="m-10">
-                        <PinContainer
-                            title={component.name}
-                            href={component.link}
-                        >
-                            <div className="flex flex-col p-4 tracking-tight text-slate-100/50 sm:w-[20rem] h-[20rem]">
-                                <img
-                                    src={component.img}
-                                    alt={component.name}
-                                    className="w-full h-40 object-cover rounded-lg"
-                                />
-                                <h3 className="max-w-xs !pb-2 font-bold text-base text-slate-100 mt-4">
-                                    {component.name}
-                                </h3>
-                                <p className="text-sm text-slate-300 mt-2">
-                                    {component.description}
-                                </p>
+        <div className="max-h-screen w-full overflow-y-auto overflow-x-hidden py-10">
+            {(showAll || showNext) && (
+                <div id="nextjs">
+                    <h1 className="ml-[2rem] md:ml-[4rem] text-extrabold text-blue-200 text-xl">Components/Next.Js</h1>
+                    <div className="h-full w-full grid gap-2 grid-cols-1 sm:grid-cols-2 p-2 2xl:grid-cols-3 place-items-center max-2xl:gap-10">
+                        {Nextcomponents.map((component) => (
+                            <div key={component.id} className="m-10">
+                                <PinContainer title={component.name} href={component.link}>
+                                    <div className="flex flex-col p-4 tracking-tight text-slate-100/50 w-[20rem] h-[20rem]">
+                                        <img src={component.img} alt={component.name} className="w-full h-40 object-cover rounded-lg" />
+                                        <h3 className="max-w-xs !pb-2 font-bold text-base text-slate-100 mt-4">{component.name}</h3>
+                                        <p className="text-sm text-slate-300 mt-2">{component.description}</p>
+                                    </div>
+                                </PinContainer>
                             </div>
-                        </PinContainer>
+                        ))}
                     </div>
-                ))}
-            </div>
+                </div>
+            )}
 
-            <h1 id="react" className="mx-10 mt-10 text-extrabold text-zinc-400 text-2xl max-sm:mx-2">React Js Components</h1>
-            <div className="h-full w-full grid grid-cols-1 sm:grid-cols-2 gap-4 p-2">
-                {Reactcomponents.map((component) => (
-                    <div key={component.id} className="m-10">
-                        <PinContainer
-                            title={component.name}
-                            href={component.link}
-                        >
-                            <div className="flex flex-col p-4 tracking-tight text-slate-100/50 sm:w-[20rem] h-[20rem]">
-                                <img
-                                    src={component.img}
-                                    alt={component.name}
-                                    className="w-full h-40 object-cover rounded-lg"
-                                />
-                                <h3 className="max-w-xs !pb-2 font-bold text-base text-slate-100 mt-4">
-                                    {component.name}
-                                </h3>
-                                <p className="text-sm text-slate-300 mt-2">
-                                    {component.description}
-                                </p>
+            {(showAll || showReact) && (
+                <div id="reactjs">
+                    <h1 className="ml-[2rem] md:ml-[4rem] mt-10 text-extrabold text-blue-200 text-xl">Components/React.Js</h1>
+                    <div className="h-full w-full grid gap-4 grid-cols-1 sm:grid-cols-2 p-2 2xl:grid-cols-3 place-items-center max-2xl:gap-10">
+                        {Reactcomponents.map((component) => (
+                            <div key={component.id} className="m-10">
+                                <PinContainer title={component.name} href={component.link}>
+                                    <div className="flex flex-col p-4 tracking-tight text-slate-100/50 w-[20rem] h-[20rem]">
+                                        <img src={component.img} alt={component.name} className="w-full h-40 object-cover rounded-lg" />
+                                        <h3 className="max-w-xs !pb-2 font-bold text-base text-slate-100 mt-4">{component.name}</h3>
+                                        <p className="text-sm text-slate-300 mt-2">{component.description}</p>
+                                    </div>
+                                </PinContainer>
                             </div>
-                        </PinContainer>
+                        ))}
                     </div>
-                ))}
-            </div>
+                </div>
+            )}
 
-            <h1 id="react" className="mx-10 mt-10 text-extrabold text-zinc-400 text-2xl max-sm:mx-2">Static Components</h1>
-            <div className="h-full w-full grid grid-cols-1 sm:grid-cols-2 gap-4 p-2">
-                {Staticcomponents.map((component) => (
-                    <div key={component.id} className="m-10">
-                        <PinContainer
-                            title={component.name}
-                            href={component.link}
-                        >
-                            <div className="flex flex-col p-4 tracking-tight text-slate-100/50 sm:w-[20rem] h-[20rem]">
-                                <img
-                                    src={component.img}
-                                    alt={component.name}
-                                    className="w-full h-40 object-cover rounded-lg"
-                                />
-                                <h3 className="max-w-xs !pb-2 font-bold text-base text-slate-100 mt-4">
-                                    {component.name}
-                                </h3>
-                                <p className="text-sm text-slate-300 mt-2">
-                                    {component.description}
-                                </p>
+            {(showAll || showStatic) && (
+                <div id="staticjs">
+                    <h1 className="ml-[2rem] md:ml-[4rem] mt-10 text-extrabold text-blue-200 text-xl">Components/StaticComponents</h1>
+                    <div className="h-full w-full grid gap-4 grid-cols-1 sm:grid-cols-2 p-2 2xl:grid-cols-3 place-items-center max-2xl:gap-10">
+                        {Staticcomponents.map((component) => (
+                            <div key={component.id} className="my-10">
+                                <PinContainer title={component.name} href={component.link}>
+                                    <div className="flex flex-col p-4 tracking-tight text-slate-100/50 w-[20rem] h-[20rem]">
+                                        <img src={component.img} alt={component.name} className="w-full h-40 object-cover rounded-lg" />
+                                        <h3 className="max-w-xs !pb-2 font-bold text-base text-slate-100 mt-4">{component.name}</h3>
+                                        <p className="text-sm text-slate-300 mt-2">{component.description}</p>
+                                    </div>
+                                </PinContainer>
                             </div>
-                        </PinContainer>
+                        ))}
                     </div>
-                ))}
-            </div>
+                </div>
+            )}
         </div>
     );
 }

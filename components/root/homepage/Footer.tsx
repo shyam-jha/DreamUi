@@ -2,8 +2,8 @@ import Link from "next/link";
 
 const Footer = () => {
     return (
-        <footer className="bg-muted mt-12 py-6 border-t">
-            <div className="container flex flex-col md:flex-row items-center justify-between gap-8">
+        <footer className="mt-12 py-6 border-t">
+            <div className="container md:mx-auto flex flex-col md:flex-row items-center justify-between">
                 <div>
                     <p className="text-sm text-muted-foreground">&copy; 2024 Dream UI. All rights reserved.</p>
                 </div>

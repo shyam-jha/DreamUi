@@ -31,3 +31,13 @@ body {
     text-wrap: balance;
   }
 }
+
+/* Hide scrollbar for WebKit-based browsers (e.g., Chrome, Safari) */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for Firefox */
+* {
+  scrollbar-width: none; /* Firefox */
+}

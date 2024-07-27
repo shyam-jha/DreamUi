@@ -17,7 +17,7 @@ const Navbar = () => {
 
                     <div className="flex flex-row items-center gap-2 md:gap-4">
                         <div className="hidden md:block">
-                            <a href="about" className="font-normal text-sm hover:text-blue-200">Templates</a>
+                            <a href="/about" className="font-normal text-sm hover:text-blue-200">Templates</a>
                         </div>
                         <div className="relative group">
                             <div className="flex items-center justify-center">

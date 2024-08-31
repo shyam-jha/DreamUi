@@ -18,7 +18,7 @@ export function WobbleCardDemo() {
                             Crafting Digital Experiences, One Component at a Time
                         </h2>
                         <p className="mt-2 md:mt-4 text-left text-base/6 text-neutral-200">
-                            At DreamUI, we're a team of passionate developers offering custom UI components for React, Next.js, and static HTML. We also provide tailored web solutions, including WordPress, Next.js-powered websites, and static websites built with React.
+                            At DreamUI, we&apos;re a team of passionate developers offering custom UI components for React, Next.js, and static HTML. We also provide tailored web solutions, including WordPress, Next.js-powered websites, and static websites built with React.
                         </p>
                     </div>
                     <Image

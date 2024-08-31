@@ -1,6 +1,7 @@
 import { FaLocationArrow } from "react-icons/fa6";
 import MagicButton from "../ui/MagicButton";
 import { TextGenerateEffect } from "../ui/TextGenerateEffect";
+import { HiArrowRight } from "react-icons/hi";
 
 const Hero = () => {
     return (
@@ -19,8 +20,17 @@ const Hero = () => {
                         Beautifully designed components that you can copy and paste into your apps.
                     </p>
 
+                    <a
+                        href="/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="sm:hidden text-sm mt-5 text-green-500 hover:text-green-700 flex items-center justify-center gap-2"
+                    >
+                        Get a website for your needs <HiArrowRight className="text-sm" />
+                    </a>
+
                     <div className="flex flex-col justify-center pb-10 items-center gap-10 sm:flex-row">
-                        <a href="#about">
+                        <a href="/comp">
                             <MagicButton
                                 title="Browse Components"
                                 icon={<FaLocationArrow />}
@@ -28,7 +38,7 @@ const Hero = () => {
                             />
                         </a>
 
-                        <a href="#about" className="hidden sm:block">
+                        <a href="/" className="hidden sm:block">
                             <MagicButton
                                 title="Get a website"
                                 icon={<FaLocationArrow />}
@@ -36,7 +46,7 @@ const Hero = () => {
                             />
                         </a>
 
-                        <a href="#about" className="">
+                        <a href="/about" className="">
                             <MagicButton
                                 title="Contribute to DreamUi"
                                 icon={<FaLocationArrow />}

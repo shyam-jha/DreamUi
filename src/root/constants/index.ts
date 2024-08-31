@@ -2,7 +2,13 @@ import founderPhoto from "@/src/root/images/shyam.jpeg"; // Example image import
 import cofounderPhoto from "@/src/root/images/yuvraj.jpeg";
 import designer1Photo from "@/src/root/images/khushi.jpeg";
 import designer2Photo from "@/src/root/images/sukriti.jpeg";
-import { FaLinkedin, FaGithub, FaLink } from "react-icons/fa"; // Import icons
+import { FaLinkedin, FaGithub, FaLink } from "react-icons/fa"; // Import 
+import uiComponentSVG from "@/src/root/svgs/exp1.svg";
+import wordpressSVG from "@/src/root/svgs/exp2.svg";
+import nextjsSVG from "@/src/root/svgs/exp3.svg";
+import staticWebSVG from "@/src/root/svgs/exp4.svg";
+
+
 
 export const teamMembers = [
     {
@@ -39,5 +45,37 @@ export const teamMembers = [
         desc: "Specializes in UI/UX design and loves turning ideas into reality.",
         linkedin: "https://github.com/bobbrown",
         photo: designer2Photo, // Use the imported image
+    },
+];
+
+
+export const servicesOffered = [
+    {
+        id: 1,
+        title: "UI Components for Various Frameworks",
+        desc: "Customizable and reusable UI components for React, Next.js, and static HTML to accelerate your development process.",
+        className: "md:col-span-2",
+        thumbnail: nextjsSVG, // Use the imported SVG
+    },
+    {
+        id: 2,
+        title: "WordPress Website Building",
+        desc: "Professional WordPress website development services tailored to your business needs, offering flexibility and ease of use.",
+        className: "md:col-span-2",
+        thumbnail: uiComponentSVG, // Use the imported SVG
+    },
+    {
+        id: 3,
+        title: "Next.js Powered Robust Websites",
+        desc: "Building high-performance, SEO-friendly websites using the power of Next.js, designed to scale with your business.",
+        className: "md:col-span-2",
+        thumbnail: wordpressSVG, // Use the imported SVG
+    },
+    {
+        id: 4,
+        title: "Static Websites Using React",
+        desc: "Creating fast, secure, and reliable static websites using React, perfect for businesses that prioritize speed and simplicity.",
+        className: "md:col-span-2",
+        thumbnail: staticWebSVG, // Use the imported SVG
     },
 ];

@@ -1,12 +1,14 @@
-import { FeaturesSectionDemo } from "@/components/root/homepage/Feature";
-import { Header } from "@/components/root/homepage/Header";
+import Display from "@/components/root/homepage/Dis";
+import { FeaturesSectionDemo } from "@/components/root/homepage/Fea";
+import Hero from "@/components/root/homepage/Hero";
 
 const Home = () => {
     return (
-        <>
-            <Header />
+        <div className="h-full w-full bg-black-100 pb-20">
+            <Hero />
+            <Display />
             <FeaturesSectionDemo />
-        </>
+        </div>
     );
 };
 

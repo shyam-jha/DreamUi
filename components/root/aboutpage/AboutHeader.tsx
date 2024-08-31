@@ -1,46 +1,63 @@
-import { FaLocationArrow } from "react-icons/fa6";
+"use client";
+import Image from "next/image";
+import React from "react";
+import { WobbleCard } from "../ui/wobble-card";
+import i1 from "@/src/render/Comp-images/next/id1/thumbnail.png";
+import i2 from "@/src/root/images/open.jpeg"
 
-import MagicButton from "../ui/MagicButton";
-import { TextGenerateEffect } from "../ui/TextGenerateEffect";
-
-const Header = () => {
+export function WobbleCardDemo() {
     return (
-        <div className="h-full w-full flex flex-col justify-center items-center">
-            <div className="flex justify-center relative my-5 sm:my-20 z-10">
-                <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center">
-
-                    <TextGenerateEffect
-                        words="Crafting UI Components & Tailored Web Solutions"
-                        className="text-center text-[40px] md:text-5xl lg:text-6xl"
-                    />
-
-                    <p className="text-center md:tracking-wider mb-10 sm:mb-5 text-sm md:mt-5 md:text-base lg:text-xl">
-                        Welcome to DreamUi! Discover custom websites tailored to your needs and contribute to our growing open-source UI library.
-                    </p>
-
-                    <div className="flex flex-col justify-center pb-10 items-center gap-10 sm:flex-row">
-                        <a href="#about">
-                            <MagicButton
-                                title="Get A Website"
-                                icon={<FaLocationArrow />}
-                                position="right"
-                            />
-                        </a>
-
-                        <a href="#about" className="">
-                            <MagicButton
-                                title="Contribute to DreamUi"
-                                icon={<FaLocationArrow />}
-                                position="right"
-                            />
-                        </a>
+        <>
+            <div className="px-5 py-20 grid grid-cols-1 lg:grid-cols-3 gap-4 max-w-7xl mx-auto w-full">
+                <WobbleCard
+                    containerClassName="col-span-1 lg:col-span-2 h-full bg-pink-800 lg:min-h-[300px]"
+                    className=""
+                >
+                    <div className="lg:max-w-xs">
+                        <h2 className="text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
+                            Crafting Digital Experiences, One Component at a Time
+                        </h2>
+                        <p className="mt-2 md:mt-4 text-left text-base/6 text-neutral-200">
+                            At DreamUI, we're a team of passionate developers offering custom UI components for React, Next.js, and static HTML. We also provide tailored web solutions, including WordPress, Next.js-powered websites, and static websites built with React.
+                        </p>
                     </div>
+                    <Image
+                        src={i1}
+                        width={500}
+                        height={500}
+                        alt="DreamUI Team"
+                        className="hidden lg:block absolute lg:-right-[32%] grayscale filter -bottom-10 object-contain rounded-2xl"
+                    />
+                </WobbleCard>
+                <WobbleCard containerClassName="col-span-1">
+                    <h2 className="lg:max-w-80 text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
+                        Building the Web, Together
+                    </h2>
+                    <p className="mt-2 md:mt-4 lg:max-w-[26rem] text-left text-base/6 text-neutral-200">
+                        From custom WordPress sites to Next.js powered web applications, we build robust and responsive websites tailored to your needs.
+                    </p>
+                </WobbleCard>
+                <WobbleCard containerClassName="col-span-1 lg:col-span-3 bg-blue-900 lg:min-h-[600px] xl:min-h-[300px]">
+                    <div className="lg:max-w-[40%]">
+                        <h2 className="max-w-sm md:max-w-lg text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
+                            Contribute, Join Our Journey to Innovate and Inspire
+                        </h2>
+                        <p className="mt-2 md:mt-4 max-w-[26rem] text-left text-base/6 text-neutral-200">
+                            Join our growing open-source community and contribute to our library. Help us build the future of UI components.
+                        </p>
+                    </div>
+                    <Image
+                        src={i2}
+                        width={900}
+                        height={500}
+                        alt="DreamUI Projects"
+                        className="hidden lg:block absolute -right-[20%] lg:-right-[33%] -bottom-10 object-contain rounded-2xl"
+                    />
+                </WobbleCard >
+            </div >
 
-                </div>
-            </div>
-            <span className="mb-10 block h-1 w-[95%] bg-gradient-to-r from-blue-500 to-green-500 mt-3 rounded-full"></span>
-        </div>
+            <span className="mx-auto mb-10 block h-1 w-[95%] bg-gradient-to-r from-blue-500 to-green-500 rounded-full"></span>
+
+        </>
     );
-};
-
-export default Header;
+}

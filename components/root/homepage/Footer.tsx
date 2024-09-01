@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { FaTwitter, FaLinkedin, FaGithub } from "react-icons/fa"; // Importing icons
 
 const Footer = () => {
     return (
@@ -12,17 +11,17 @@ const Footer = () => {
                         <h3 className="text-lg font-semibold mb-4">Services</h3>
                         <ul className="space-y-2">
                             <li>
-                                <Link href="#" className="text-sm hover:underline" prefetch={false}>
+                                <Link href="/reachus" className="text-sm hover:underline" prefetch={false}>
                                     Next.js Powered Websites
                                 </Link>
                             </li>
                             <li>
-                                <Link href="#" className="text-sm hover:underline" prefetch={false}>
+                                <Link href="/reachus" className="text-sm hover:underline" prefetch={false}>
                                     React Static Websites
                                 </Link>
                             </li>
                             <li>
-                                <Link href="#" className="text-sm hover:underline" prefetch={false}>
+                                <Link href="/reachus" className="text-sm hover:underline" prefetch={false}>
                                     WordPress/Wix Websites
                                 </Link>
                             </li>
@@ -49,17 +48,6 @@ const Footer = () => {
                 {/* Right Part: Icons & One-Liner */}
                 <div className="flex flex-col md:flex-row items-center md:items-end gap-4 mt-8 md:mt-0">
                     {/* Icons */}
-                    <div className="flex items-center gap-4">
-                        <Link href="#" aria-label="Twitter" className="hover:text-gray-400">
-                            <FaTwitter size={24} />
-                        </Link>
-                        <Link href="#" aria-label="LinkedIn" className="hover:text-gray-400">
-                            <FaLinkedin size={24} />
-                        </Link>
-                        <Link href="#" aria-label="GitHub" className="hover:text-gray-400">
-                            <FaGithub size={24} />
-                        </Link>
-                    </div>
 
                     {/* One-Liner */}
                     <p className="text-sm text-gray-400 text-center md:text-right">

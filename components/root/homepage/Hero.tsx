@@ -16,15 +16,15 @@ const Hero = () => {
                         className="text-center text-[40px] md:text-5xl lg:text-6xl"
                     />
 
-                    <p className="text-center md:tracking-wider mb-10 sm:mb-5 text-sm md:mt-5 md:text-base lg:text-xl">
+                    <p className="text-center md:tracking-wider mb-5 text-sm md:mt-5 md:text-base lg:text-xl">
                         Beautifully designed components that you can copy and paste into your apps.
                     </p>
 
                     <a
-                        href="/"
+                        href="/reachus/"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="sm:hidden text-sm mt-5 text-green-500 hover:text-green-700 flex items-center justify-center gap-2"
+                        className="sm:hidden text-sm mb-10 text-green-500 hover:text-green-700 flex items-center justify-center gap-2"
                     >
                         Get a website for your needs <HiArrowRight className="text-sm" />
                     </a>
@@ -38,7 +38,7 @@ const Hero = () => {
                             />
                         </a>
 
-                        <a href="/" className="hidden sm:block">
+                        <a href="/reachus" className="hidden sm:block">
                             <MagicButton
                                 title="Get a website"
                                 icon={<FaLocationArrow />}

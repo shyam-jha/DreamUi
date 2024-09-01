@@ -16,9 +16,6 @@ const Navbar = () => {
                     <a href="/" className="text-2xl ml-2 text-red-100 font-bold max-sm:text-base">Dream UI</a>
 
                     <div className="flex flex-row items-center gap-2 md:gap-4">
-                        <div className="hidden md:block">
-                            <a href="/about" className="font-normal text-sm hover:text-blue-200">Templates</a>
-                        </div>
                         <div className="relative group">
                             <div className="flex items-center justify-center">
                                 <p className="font-normal  text-sm md:text-sm  hover:text-blue-200">Components</p>
@@ -44,6 +41,10 @@ const Navbar = () => {
                         <div className="hidden md:block">
                             <a href="/about" className="font-normal md:text-sm hover:text-blue-200">About Us</a>
                         </div>
+                        <div className="hidden md:block">
+                            <a href="/reachus" className="font-normal text-sm hover:text-blue-200">Reach Us</a>
+                        </div>
+
                         <div className="flex gap-4 md:hidden ">
                             <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="hover:text-blue-200">
                                 <FaGithub size={16} />
@@ -75,8 +76,7 @@ const Navbar = () => {
                     {toggleMenu && (
                         <div className="flex flex-col items-center text-center absolute right-0 top-[50px] mt-[10px] min-w-[210px] rounded-2xl border border-white bg-black text-white p-4 shadow-lg z-[999]">
                             <a href="/about" className="py-2 hover:text-blue-500" onClick={() => setToggleMenu(false)}>About Us</a>
-                            <a href="/templates" className="py-2 hover:text-blue-500" onClick={() => setToggleMenu(false)}>Templates</a>
-                            <a href="/pricing" className="py-2 hover:text-blue-500" onClick={() => setToggleMenu(false)}>Pricing</a>
+                            <a href="/reachus" className="py-2 hover:text-blue-500" onClick={() => setToggleMenu(false)}>Reach Us</a>
                             <div className="flex gap-4 mt-4">
                                 <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="hover:text-blue-500">
                                     <FaGithub size={24} />

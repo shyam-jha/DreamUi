@@ -76,6 +76,7 @@ const Navbar = () => {
                     {toggleMenu && (
                         <div className="flex flex-col items-center text-center absolute right-0 top-[50px] mt-[10px] min-w-[210px] rounded-2xl border border-white bg-black text-white p-4 shadow-lg z-[999]">
                             <a href="/about" className="py-2 hover:text-blue-500" onClick={() => setToggleMenu(false)}>About Us</a>
+                            <a href="/install" className="py-2 hover:text-blue-500" onClick={() => setToggleMenu(false)}>Installation Guide</a>
                             <a href="/reachus" className="py-2 hover:text-blue-500" onClick={() => setToggleMenu(false)}>Reach Us</a>
                             <div className="flex gap-4 mt-4">
                                 <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="hover:text-blue-500">

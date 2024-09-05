@@ -18,15 +18,13 @@ const Sidebar = () => {
         <div className="flex flex-col flex-1 gap-10 h-full overflow-y-auto w-full pb-10 px-8 mt-10 ">
             <div className="flex flex-col gap-5">
                 <h1 className="text-base font-extrabold text-white">Follow for Updates</h1>
-                <h2 className="text-sm font-bold text-zinc-400">Github @dreamUI</h2>
+                <a href='https://github.com/shyam-jha/DreamUi' className="text-sm font-bold text-zinc-400">Github @dreamUI</a>
             </div>
 
             <div className="flex flex-col gap-5">
                 <div className='flex flex-col gap-2'>
                     <h1 className="text-base font-extrabold text-white">Installation</h1>
-                    <h2 className="text-sm font-bold text-zinc-400">Doc For Next.Js</h2>
-                    <h2 className="text-sm font-bold text-zinc-400">Doc For React.Js</h2>
-                    <h2 className="text-sm font-bold text-zinc-400">Doc For Static Html</h2>
+                    <a href='/install' className="text-sm font-bold text-zinc-400">Installation Guide</a>
                 </div>
             </div>
 
